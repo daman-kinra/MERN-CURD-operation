@@ -6,6 +6,7 @@ function Data(props) {
 //Setting the states
 const [users, setUsers] = useState([]);
 const [del, setDeleted] = useState(true);
+const [loading, setLoad] = useState(false)
 
 
 //Delete a single user
@@ -17,9 +18,11 @@ const child = (id)=>{
 
 //Fetch data when dleted or added
  useEffect(()=>{
+     setLoad(true)
         fetch('http://localhost:8000/users/')
         .then(res=>res.json())
         .then(res=>{
+            setLoad(false)
             setUsers(res);
         })
       },[del, props.asd,props.flag])
@@ -27,7 +30,9 @@ const child = (id)=>{
 
     return (
         <div className='datainner-div'>
-            <div className='inner-div'>
+            {loading === true ? (
+                <div className="lds-facebook"><div></div><div></div><div></div></div>
+            ):(<div className='inner-div'>
             <h1>Users-Data</h1>
             {users.map((data,pos)=>{
                 return(
@@ -55,7 +60,8 @@ const child = (id)=>{
                 </div>
                 )        
             })}
-            </div>
+            </div>)}
+
         </div>
     )
 }

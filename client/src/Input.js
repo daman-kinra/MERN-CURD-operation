@@ -11,7 +11,8 @@ function Input(props) {
     const [id,setId] = useState(1);
     const [asd, setAsd] = useState(true);
     const [add, setAdd] = useState(false);
-    const [_id,set_ID] = useState('')
+    const [_id,set_ID] = useState('');
+    const [handle, setHandle] = useState(false);
 
 //Setting all the states to that specific user's data
 const handleEdits = (id) =>{
@@ -31,6 +32,7 @@ const handleEdits = (id) =>{
 //Posting new Data
 const handleClick =()=>{
         setId(id+1);
+        if(name!=='' && adress!=='' && city!=='' &&phoneNumber!==''){
         fetch('http://localhost:8000/users/add',{
         method: 'POST',
         headers: {
@@ -49,10 +51,15 @@ const handleClick =()=>{
         setUsername('')
         setPhone('')
         setAsd(!asd)
+        setHandle(false)
     }).catch(err=>console.log(err))
+}
+else{
+    setHandle(true)
+}
     }
 
-// Sending new data that post
+// Sending new data to that post
 const handleUpdate = (id) =>{
     fetch(`http://localhost:8000/users/${id}`,{
             method: 'PATCH',
@@ -84,9 +91,11 @@ const handleUpdate = (id) =>{
             <input type="text" placeholder="phoneNumber" value={phoneNumber} onChange={e=>setPhone(e.target.value)}/>
             {add===false ? (
                 <button onClick={handleClick}>Add</button>
+                
             ):(
                 <button onClick={()=>handleUpdate(_id)}>Update</button>
             )}
+            {handle===true ? (<p className='error'>Any one field is empty*</p>):('')}
             </div>
             <div className='data-div'>
             <Data asd={asd} flag={props.flag} handleEdits={handleEdits}/>
