@@ -7,9 +7,10 @@ const userRoute = require('./routes/users');//To get the routes we made in users
 
 
 //Midlewares
+app.use(cors());// To prevent from cors
 app.use(bodyParser.json());// Yai sabse upar Rakhna hai, To convert data into json
 app.use('/users', userRoute);// To call the routes
-app.use(cors());// To prevent from cors
+
 
 //DB connection
 db.connect(' mongodb+srv://daman:29july2000@cluster0.cof6e.mongodb.net/User?retryWrites=true&w=majority',{

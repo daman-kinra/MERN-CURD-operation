@@ -21,7 +21,7 @@ router.delete('/delete',async (req,res)=>{
     res.send('Deleted')
 });
 
-//
+//Delete a specific User
 router.delete('/:id',async (req,res)=>{
     await User.remove({_id: req.params.id});
     res.send('Deleted');
