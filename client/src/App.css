@@ -143,3 +143,19 @@ input{
       font-size: 17px;
       text-decoration: underline;
   }
+  @media only screen and (max-width: 750px) {
+    .input-cont{
+        display: flex;
+        flex-direction: column;
+    }
+    .inner-cont{
+        border: 0px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    .datainner-div{
+        border: 0;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+  }
