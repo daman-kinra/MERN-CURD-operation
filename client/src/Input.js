@@ -78,6 +78,7 @@ const handleUpdate = (id) =>{
         setUsername('')
         setPhone('')
         setAsd(!asd)
+        setAdd(false)
     })
 }
 
