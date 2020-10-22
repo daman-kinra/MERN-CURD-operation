@@ -1,162 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 20px;
-    color: rgb(46, 41, 41);
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  color: rgb(46, 41, 41);
 }
-.App{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
-.input-cont{
-    margin-top: 20px;
-    display: flex;
-    
+.input-cont {
+  margin-top: 20px;
+  display: flex;
 }
-.inner-cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    border: 1px solid black;
-    border-right: 0px;
+.inner-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border: 1px solid black;
+  border-right: 0px;
 }
-.data-div{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center ;
+.data-div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.datainner-div{
-    border: 1px solid black;
-    width: 100%;
-    text-align: center;
-    height: 477px;
-    margin:4px, 4px; 
-    padding:4px;  
-    overflow-x: hidden; 
-    overflow-y: auto; 
+.datainner-div {
+  border: 1px solid black;
+  width: 100%;
+  text-align: center;
+  height: 477px;
+  margin: 4px, 4px;
+  padding: 4px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-.btn{
-    text-align: center;
+.btn {
+  text-align: center;
 }
-.btn button{
-    height: 30px;
-    width: 140px;
-    margin-top: 20px;
+.btn button {
+  height: 30px;
+  width: 140px;
+  margin-top: 20px;
 }
-input{
-    padding-left: 15px;
-    width: 300px;
-    height: 30px;
-    margin-bottom: 20px;
+input {
+  padding-left: 15px;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 20px;
 }
-.inner-cont button{
-    width: 300px;
-    height: 30px;
+.inner-cont button {
+  width: 300px;
+  height: 30px;
 }
-.inner-cont h1{
-    text-decoration: underline;
-    margin-bottom: 20px;
-    font-size: 30px;
+.inner-cont h1 {
+  text-decoration: underline;
+  margin-bottom: 20px;
+  font-size: 30px;
 }
-.inner-div{
-    display: flex;
-    flex-direction: column;
+.inner-div {
+  display: flex;
+  flex-direction: column;
 }
-.inner-div h1{
-    font-size: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-decoration: underline;
+.inner-div h1 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
 }
-.data button{
-    width: 20%;
-    height: 30px;
+.data button {
+  width: 20%;
+  height: 30px;
 }
-.data{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    border: 0.5px dotted grey;
-    margin-bottom: 20px;
-    background-color: #e8ffff;
-    margin: 20px;
+.data {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px dotted grey;
+  margin-bottom: 20px;
+  background-color: #e8ffff;
+  margin: 20px;
 }
-.data.new{
-    background-color: #f8efd4;
+.data.new {
+  background-color: #f8efd4;
 }
-.p{
-    display: flex;
-    justify-content: center;
+.p {
+  display: flex;
+  justify-content: center;
 }
-.p p{
-    margin-right: 20px;
-    padding: 10px;
+.p p {
+  margin-right: 20px;
+  padding: 10px;
 }
 .lds-facebook {
-    display: inline-block;
-    position: relative;
-    top: 40%;
-    width: 80px;
-    height: 80px;
+  display: inline-block;
+  position: relative;
+  top: 40%;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: black;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
   }
-  .lds-facebook div {
-    display: inline-block;
-    position: absolute;
-    left: 8px;
-    width: 16px;
-    background: black;
-    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
   }
-  .lds-facebook div:nth-child(1) {
-    left: 8px;
-    animation-delay: -0.24s;
+}
+.error {
+  margin-top: 10px;
+  color: rgb(185, 64, 64);
+  font-size: 17px;
+  text-decoration: underline;
+}
+@media only screen and (max-width: 750px) {
+  .input-cont {
+    display: flex;
+    flex-direction: column;
   }
-  .lds-facebook div:nth-child(2) {
-    left: 32px;
-    animation-delay: -0.12s;
+  .inner-cont {
+    border: 0px;
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
-  .lds-facebook div:nth-child(3) {
-    left: 56px;
-    animation-delay: 0;
+  .datainner-div {
+    border: 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
   }
-  @keyframes lds-facebook {
-    0% {
-      top: 8px;
-      height: 64px;
-    }
-    50%, 100% {
-      top: 24px;
-      height: 32px;
-    }
-  }
-  .error{
-      margin-top: 10px;
-      color: rgb(185, 64, 64);
-      font-size: 17px;
-      text-decoration: underline;
-  }
-  @media only screen and (max-width: 750px) {
-    .input-cont{
-        display: flex;
-        flex-direction: column;
-    }
-    .inner-cont{
-        border: 0px;
-        margin-bottom: 30px;
-        margin-top: 30px;
-    }
-    .datainner-div{
-        border: 0;
-        border-top: 1px solid #000;
-        border-bottom: 1px solid #000;
-    }
-  }
+}
+button {
+  cursor: pointer;
+}
